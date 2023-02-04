@@ -36,14 +36,14 @@ const CreatePost = () => {
   return (
     <section className='max-w-7xl mx-auto'>
       <div>
-        <h1 className='font-extrabold text-[#222329] text-[32px]'>
+        <h1 className='text-center font-extrabold text-[#222329] text-[32px]'>
           Create
         </h1>
-        <p className='mt-2 text-[#666e75] text-[16px] max-w[500px]'>
+        <p className='text-center mt-2 text-[#666e75] text-[16px] max-w[500px]'>
           Create imaginative and visually stunning images through DALL-E AI and share with the community
         </p>
       </div>
-      <form className='mt-16 max-w-3xl' onSubmit={handleSubmit}>
+      <form className='mt-16 max-w-3xl flex flex-col' onSubmit={handleSubmit}>
         <div className='flex flex-col gap-5'>
           <FormField
             labelName="Your name"
@@ -63,7 +63,7 @@ const CreatePost = () => {
             isSurpriseMe
             handleSurpriseMe={handleSurpriseMe}
           />
-          <div className='relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center'>
+          <div className='relative self-center bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center'>
             {form.photo ? <img
               src={form.photo}
               alt={form.prompt}
@@ -81,7 +81,7 @@ const CreatePost = () => {
             }
           </div>
         </div>
-        <div className='mt-5 flex gap-5'>
+        <div className='mt-5 flex justify-center gap-5'>
           <button
             type='button'
             onClick={generateImage}
@@ -91,7 +91,7 @@ const CreatePost = () => {
           </button>
         </div>
         <div className='mt-10'>
-          <p className='mt-2 text-[#666e75] text-[14px]'>Once you have created the image you want, you can share it with others in the comunity</p>
+          <p className='mt-2 text-[#666e75] text-[14px] text-center'>Once you have created the image you want, you can share it with others in the comunity</p>
         </div>
         <button
           type='submit'
